@@ -5,7 +5,7 @@
  * Use getMarketMakerManagerAddress() to retrieve addresses dynamically.
  */
 
-import { getConfigFetcher, getIsDev } from "@swarm/shared";
+import { getConfigFetcher, getIsDev } from "@swarm-markets/shared";
 
 /**
  * Market Maker Manager contract ABI (simplified - only methods we need).

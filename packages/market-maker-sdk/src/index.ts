@@ -8,7 +8,7 @@
  *
  * @example
  * ```typescript
- * import { MarketMakerClient, Network } from '@swarm/market-maker-sdk';
+ * import { MarketMakerClient, Network } from '@swarm-markets/market-maker-sdk';
  *
  * const client = new MarketMakerClient({
  *   network: Network.POLYGON,
@@ -36,7 +36,7 @@
  */
 
 // Re-export shared types
-export { Network, type Quote, type TradeResult } from "@swarm/shared";
+export { Network, type Quote, type TradeResult } from "@swarm-markets/shared";
 
 // Main client
 export {

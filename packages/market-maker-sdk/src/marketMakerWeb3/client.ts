@@ -27,7 +27,7 @@ import {
   ERC20_ABI,
   TX_TIMEOUT_MS,
   GAS_BUFFER_MULTIPLIER,
-} from "@swarm/shared";
+} from "@swarm-markets/shared";
 
 import {
   MARKET_MAKER_MANAGER_ABI,

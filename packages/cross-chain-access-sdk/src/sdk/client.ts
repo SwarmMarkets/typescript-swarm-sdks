@@ -16,7 +16,7 @@ import {
   USDC_ADDRESSES,
   getConfigFetcher,
   closeConfigFetchers,
-} from "@swarm/shared";
+} from "@swarm-markets/shared";
 
 import {
   CrossChainAccessAPIClient,

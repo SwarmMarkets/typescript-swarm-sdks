@@ -8,18 +8,18 @@ import {
   type Quote,
   type TradeResult,
   closeConfigFetchers,
-} from "@swarm/shared";
+} from "@swarm-markets/shared";
 
 import {
   MarketMakerClient,
   type MarketMakerClientOptions,
-} from "@swarm/market-maker-sdk";
+} from "@swarm-markets/market-maker-sdk";
 
 import {
   CrossChainAccessClient,
   MarketClosedException as CrossChainAccessMarketClosedException,
   type CrossChainAccessClientOptions,
-} from "@swarm/cross-chain-access-sdk";
+} from "@swarm-markets/cross-chain-access-sdk";
 
 import {
   Router,

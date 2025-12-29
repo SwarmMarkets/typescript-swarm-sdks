@@ -15,8 +15,8 @@ import "dotenv/config";
 import {
   CrossChainAccessClient,
   MarketHours,
-} from "@swarm/cross-chain-access-sdk";
-import { Network } from "@swarm/shared";
+} from "@swarm-markets/cross-chain-access-sdk";
+import { Network } from "@swarm-markets/shared";
 
 async function main(): Promise<void> {
   // Configuration

@@ -14,8 +14,8 @@
  */
 
 import "dotenv/config";
-import { MarketMakerClient } from "@swarm/market-maker-sdk";
-import { Network } from "@swarm/shared";
+import { MarketMakerClient } from "@swarm-markets/market-maker-sdk";
+import { Network } from "@swarm-markets/shared";
 
 async function main(): Promise<void> {
   // Configuration

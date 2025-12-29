@@ -16,7 +16,7 @@
  */
 
 import "dotenv/config";
-import { TradingClient, RoutingStrategy, Network } from "@swarm/trading-sdk";
+import { TradingClient, RoutingStrategy, Network } from "@swarm-markets/trading-sdk";
 
 async function main() {
   // Configuration from environment variables

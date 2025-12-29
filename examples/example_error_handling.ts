@@ -11,18 +11,18 @@ import {
   RoutingStrategy,
   NoLiquidityError,
   AllPlatformsFailedError,
-} from "@swarm/trading-sdk";
+} from "@swarm-markets/trading-sdk";
 import {
   CrossChainAccessClient,
   MarketClosedError,
   AccountBlockedError,
   InsufficientFundsError,
-} from "@swarm/cross-chain-access-sdk";
+} from "@swarm-markets/cross-chain-access-sdk";
 import {
   MarketMakerClient,
   NoOffersAvailableError,
-} from "@swarm/market-maker-sdk";
-import { Network, InsufficientBalanceError } from "@swarm/shared";
+} from "@swarm-markets/market-maker-sdk";
+import { Network, InsufficientBalanceError } from "@swarm-markets/shared";
 
 async function exampleCrossChainAccessErrors(): Promise<void> {
   console.log("=".repeat(60));

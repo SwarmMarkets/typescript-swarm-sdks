@@ -7,7 +7,7 @@ import {
   APIException,
   getCrossChainAccessApiUrl,
   getIsDev,
-} from "@swarm/shared";
+} from "@swarm-markets/shared";
 
 import type {
   CrossChainAccessQuote,

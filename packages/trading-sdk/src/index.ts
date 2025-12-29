@@ -5,7 +5,7 @@
  */
 
 // Re-export common types from shared
-export { Network, type Quote, type TradeResult } from "@swarm/shared";
+export { Network, type Quote, type TradeResult } from "@swarm-markets/shared";
 
 // Main SDK client
 export {
@@ -32,5 +32,5 @@ export {
 } from "./exceptions.js";
 
 // Re-export underlying SDK clients for direct access if needed
-export { MarketMakerClient } from "@swarm/market-maker-sdk";
-export { CrossChainAccessClient } from "@swarm/cross-chain-access-sdk";
+export { MarketMakerClient } from "@swarm-markets/market-maker-sdk";
+export { CrossChainAccessClient } from "@swarm-markets/cross-chain-access-sdk";

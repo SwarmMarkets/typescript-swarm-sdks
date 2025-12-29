@@ -44,4 +44,4 @@ export {
 } from "./marketHours/index.js";
 
 // Re-export shared types
-export type { Network, Quote, TradeResult } from "@swarm/shared";
+export type { Network, Quote, TradeResult } from "@swarm-markets/shared";

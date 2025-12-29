@@ -7,7 +7,7 @@ import {
   APIException,
   type Quote,
   getRpqServiceUrl,
-} from "@swarm/shared";
+} from "@swarm-markets/shared";
 
 import {
   type Offer,

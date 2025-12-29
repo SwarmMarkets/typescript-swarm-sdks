@@ -13,7 +13,7 @@ import {
   createTradeResult,
   SwarmAuth,
   closeConfigFetchers,
-} from "@swarm/shared";
+} from "@swarm-markets/shared";
 
 import {
   RPQClient,

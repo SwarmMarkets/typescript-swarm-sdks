@@ -2,7 +2,7 @@
  * Trading platform routing strategies.
  */
 
-import type { Quote } from "@swarm/shared";
+import type { Quote } from "@swarm-markets/shared";
 import { NoLiquidityException } from "./exceptions.js";
 
 /**

@@ -17,16 +17,16 @@ importers:
 
   examples:
     dependencies:
-      '@swarm/cross-chain-access-sdk':
+      '@swarm-markets/cross-chain-access-sdk':
         specifier: workspace:*
         version: link:../packages/cross-chain-access-sdk
-      '@swarm/market-maker-sdk':
+      '@swarm-markets/market-maker-sdk':
         specifier: workspace:*
         version: link:../packages/market-maker-sdk
-      '@swarm/shared':
+      '@swarm-markets/shared':
         specifier: workspace:*
         version: link:../packages/shared
-      '@swarm/trading-sdk':
+      '@swarm-markets/trading-sdk':
         specifier: workspace:*
         version: link:../packages/trading-sdk
     devDependencies:
@@ -42,7 +42,7 @@ importers:
 
   packages/cross-chain-access-sdk:
     dependencies:
-      '@swarm/shared':
+      '@swarm-markets/shared':
         specifier: workspace:*
         version: link:../shared
       viem:
@@ -55,7 +55,7 @@ importers:
 
   packages/market-maker-sdk:
     dependencies:
-      '@swarm/shared':
+      '@swarm-markets/shared':
         specifier: workspace:*
         version: link:../shared
       viem:
@@ -84,13 +84,13 @@ importers:
 
   packages/trading-sdk:
     dependencies:
-      '@swarm/cross-chain-access-sdk':
+      '@swarm-markets/cross-chain-access-sdk':
         specifier: workspace:*
         version: link:../cross-chain-access-sdk
-      '@swarm/market-maker-sdk':
+      '@swarm-markets/market-maker-sdk':
         specifier: workspace:*
         version: link:../market-maker-sdk
-      '@swarm/shared':
+      '@swarm-markets/shared':
         specifier: workspace:*
         version: link:../shared
       viem:

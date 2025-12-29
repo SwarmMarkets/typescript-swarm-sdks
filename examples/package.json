@@ -1,5 +1,5 @@
 {
-  "name": "@swarm/examples",
+  "name": "@swarm-markets/examples",
   "version": "0.1.0",
   "private": true,
   "description": "Swarm SDK Examples",
@@ -11,10 +11,10 @@
     "error-handling": "npx tsx example_error_handling.ts"
   },
   "dependencies": {
-    "@swarm/trading-sdk": "workspace:*",
-    "@swarm/market-maker-sdk": "workspace:*",
-    "@swarm/cross-chain-access-sdk": "workspace:*",
-    "@swarm/shared": "workspace:*"
+    "@swarm-markets/trading-sdk": "workspace:*",
+    "@swarm-markets/market-maker-sdk": "workspace:*",
+    "@swarm-markets/cross-chain-access-sdk": "workspace:*",
+    "@swarm-markets/shared": "workspace:*"
   },
   "devDependencies": {
     "tsx": "^4.0.0",

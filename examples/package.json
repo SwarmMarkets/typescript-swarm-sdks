@@ -1,0 +1,24 @@
+{
+  "name": "@swarm/examples",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Swarm SDK Examples",
+  "type": "module",
+  "scripts": {
+    "trading": "npx tsx example_trading.ts",
+    "market-maker": "npx tsx example_market_maker.ts",
+    "cross-chain-access": "npx tsx example_cross_chain_access.ts",
+    "error-handling": "npx tsx example_error_handling.ts"
+  },
+  "dependencies": {
+    "@swarm/trading-sdk": "workspace:*",
+    "@swarm/market-maker-sdk": "workspace:*",
+    "@swarm/cross-chain-access-sdk": "workspace:*",
+    "@swarm/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0",
+    "dotenv": "^16.0.0"
+  }
+}

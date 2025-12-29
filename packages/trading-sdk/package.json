@@ -1,0 +1,35 @@
+{
+  "name": "@swarm-markets/trading-sdk",
+  "version": "0.1.0",
+  "description": "Swarm Trading SDK with smart routing between Market Maker and Cross-Chain Access",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@swarm-markets/shared": "workspace:*",
+    "@swarm-markets/market-maker-sdk": "workspace:*",
+    "@swarm-markets/cross-chain-access-sdk": "workspace:*",
+    "viem": "^2.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,78 @@
+name: Publish to NPM
+
+on:
+  release:
+    types: [published]
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write # Required for npm provenance
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+          cache-dependency-path: 'typescript/pnpm-lock.yaml'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install dependencies
+        working-directory: ./typescript
+        run: pnpm install --frozen-lockfile
+
+      - name: Build packages
+        working-directory: ./typescript
+        run: pnpm build
+
+      - name: Publish packages to npm
+        working-directory: ./typescript
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
+        run: |
+          # Configure npm authentication
+          echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > ~/.npmrc
+          
+          # Publish packages in correct order (shared first, then others)
+          echo "Publishing @swarm-markets/shared..."
+          cd packages/shared && npm publish --provenance --access public || echo "Failed to publish shared or already published"
+          cd ../..
+          
+          echo "Publishing @swarm-markets/market-maker-sdk..."
+          cd packages/market-maker-sdk && npm publish --provenance --access public || echo "Failed to publish market-maker-sdk or already published"
+          cd ../..
+          
+          echo "Publishing @swarm-markets/cross-chain-access-sdk..."
+          cd packages/cross-chain-access-sdk && npm publish --provenance --access public || echo "Failed to publish cross-chain-access-sdk or already published"
+          cd ../..
+          
+          echo "Publishing @swarm-markets/trading-sdk..."
+          cd packages/trading-sdk && npm publish --provenance --access public || echo "Failed to publish trading-sdk or already published"
+          cd ../..
+
+      - name: Summary
+        run: |
+          echo "## Published Packages 📦" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "The following packages have been published to npm:" >> $GITHUB_STEP_SUMMARY
+          echo "- [@swarm-markets/shared](https://www.npmjs.com/package/@swarm-markets/shared)" >> $GITHUB_STEP_SUMMARY
+          echo "- [@swarm-markets/market-maker-sdk](https://www.npmjs.com/package/@swarm-markets/market-maker-sdk)" >> $GITHUB_STEP_SUMMARY
+          echo "- [@swarm-markets/cross-chain-access-sdk](https://www.npmjs.com/package/@swarm-markets/cross-chain-access-sdk)" >> $GITHUB_STEP_SUMMARY
+          echo "- [@swarm-markets/trading-sdk](https://www.npmjs.com/package/@swarm-markets/trading-sdk)" >> $GITHUB_STEP_SUMMARY

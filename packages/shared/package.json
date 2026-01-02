@@ -1,6 +1,6 @@
 {
   "name": "@swarm-markets/shared",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Shared utilities and types for Swarm SDKs",
   "type": "module",
   "main": "./dist/index.js",

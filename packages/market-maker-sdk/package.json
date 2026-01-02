@@ -1,6 +1,6 @@
 {
   "name": "@swarm-markets/market-maker-sdk",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Swarm Market Maker SDK - Decentralized OTC trading for RWAs",
   "type": "module",
   "main": "./dist/index.js",
@@ -28,7 +28,7 @@
     "lint": "echo 'No linter configured'"
   },
   "dependencies": {
-    "@swarm-markets/shared": "^1.0.0",
+    "@swarm-markets/shared": "^1.0.3",
     "viem": "^2.21.0"
   },
   "devDependencies": {

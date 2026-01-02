@@ -1,6 +1,6 @@
 {
   "name": "@swarm-markets/cross-chain-access-sdk",
-  "version": "0.1.0",
+  "version": "1.0.3",
   "description": "Swarm Cross-Chain Access SDK for stock market RWA trading",
   "type": "module",
   "main": "./dist/index.js",
@@ -24,7 +24,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@swarm-markets/shared": "^1.0.0",
+    "@swarm-markets/shared": "^1.0.3",
     "viem": "^2.0.0"
   },
   "devDependencies": {

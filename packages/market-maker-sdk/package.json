@@ -28,7 +28,7 @@
     "lint": "echo 'No linter configured'"
   },
   "dependencies": {
-    "@swarm-markets/shared": "workspace:*",
+    "@swarm-markets/shared": "^1.0.0",
     "viem": "^2.21.0"
   },
   "devDependencies": {

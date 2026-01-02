@@ -43,8 +43,8 @@ importers:
   packages/cross-chain-access-sdk:
     dependencies:
       '@swarm-markets/shared':
-        specifier: workspace:*
-        version: link:../shared
+        specifier: ^1.0.0
+        version: 1.0.0(typescript@5.9.3)
       viem:
         specifier: ^2.0.0
         version: 2.43.1(typescript@5.9.3)
@@ -56,8 +56,8 @@ importers:
   packages/market-maker-sdk:
     dependencies:
       '@swarm-markets/shared':
-        specifier: workspace:*
-        version: link:../shared
+        specifier: ^1.0.0
+        version: 1.0.0(typescript@5.9.3)
       viem:
         specifier: ^2.21.0
         version: 2.43.1(typescript@5.9.3)
@@ -85,14 +85,14 @@ importers:
   packages/trading-sdk:
     dependencies:
       '@swarm-markets/cross-chain-access-sdk':
-        specifier: workspace:*
-        version: link:../cross-chain-access-sdk
+        specifier: ^0.1.0
+        version: 0.1.0(typescript@5.9.3)
       '@swarm-markets/market-maker-sdk':
-        specifier: workspace:*
-        version: link:../market-maker-sdk
+        specifier: ^1.0.0
+        version: 1.0.0(typescript@5.9.3)
       '@swarm-markets/shared':
-        specifier: workspace:*
-        version: link:../shared
+        specifier: ^1.0.0
+        version: 1.0.0(typescript@5.9.3)
       viem:
         specifier: ^2.0.0
         version: 2.43.1(typescript@5.9.3)
@@ -283,6 +283,15 @@ packages:
   '@scure/bip39@1.6.0':
     resolution: {integrity: sha512-+lF0BbLiJNwVlev4eKelw1WWLaiKXw7sSl8T6FvBlWkdX+94aGJ4o8XjUdlyhTCjd8c+B3KT3JfS8P0bLRNU6A==}
 
+  '@swarm-markets/cross-chain-access-sdk@0.1.0':
+    resolution: {integrity: sha512-kmhQf9MA9mArQmBJoOPXWT9kKrEePTCbzl7L8fo4WtCoKAhWhg5xcoODMr3SpltaDJaWcbg+/MnMjwLPM2wIIA==}
+
+  '@swarm-markets/market-maker-sdk@1.0.0':
+    resolution: {integrity: sha512-xzITw1SoZXgmOOhPdK2pXYCmkXGtWvnjey5aVHMeI5CXN/aGMNlqv1YWGc1ZYVemmQ7kmQ66cgr0gaOb+F9O3Q==}
+
+  '@swarm-markets/shared@1.0.0':
+    resolution: {integrity: sha512-H7IP3mvFdiMtdFRLrDhoSxw50cW2FphEiW/lFI8DifcoffroVusFaNzQiIEYrMrpSypYi/68nl5ASe+eLcahNQ==}
+
   '@types/node@20.19.27':
     resolution: {integrity: sha512-N2clP5pJhB2YnZJ3PIHFk5RkygRX5WO/5f0WC08tp0wd+sv0rsJk3MqWn3CbNmT2J505a5336jaQj4ph1AdMug==}
 
@@ -468,6 +477,35 @@ snapshots:
     dependencies:
       '@noble/hashes': 1.8.0
       '@scure/base': 1.2.6
+
+  '@swarm-markets/cross-chain-access-sdk@0.1.0(typescript@5.9.3)':
+    dependencies:
+      '@swarm-markets/shared': link:packages/shared
+      viem: 2.43.1(typescript@5.9.3)
+    transitivePeerDependencies:
+      - bufferutil
+      - typescript
+      - utf-8-validate
+      - zod
+
+  '@swarm-markets/market-maker-sdk@1.0.0(typescript@5.9.3)':
+    dependencies:
+      '@swarm-markets/shared': link:packages/shared
+      viem: 2.43.1(typescript@5.9.3)
+    transitivePeerDependencies:
+      - bufferutil
+      - typescript
+      - utf-8-validate
+      - zod
+
+  '@swarm-markets/shared@1.0.0(typescript@5.9.3)':
+    dependencies:
+      viem: 2.43.1(typescript@5.9.3)
+    transitivePeerDependencies:
+      - bufferutil
+      - typescript
+      - utf-8-validate
+      - zod
 
   '@types/node@20.19.27':
     dependencies:

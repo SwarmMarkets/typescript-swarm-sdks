@@ -24,9 +24,9 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@swarm-markets/shared": "workspace:*",
-    "@swarm-markets/market-maker-sdk": "workspace:*",
-    "@swarm-markets/cross-chain-access-sdk": "workspace:*",
+    "@swarm-markets/shared": "^1.0.0",
+    "@swarm-markets/market-maker-sdk": "^1.0.0",
+    "@swarm-markets/cross-chain-access-sdk": "^0.1.0",
     "viem": "^2.0.0"
   },
   "devDependencies": {
